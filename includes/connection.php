@@ -24,3 +24,11 @@
             return $con->query($sql);
         }
     }
+
+    function db_getRows($table,$columns="*",$where="1"){
+        return db_query("select $columns from $table where $where");
+    }
+
+    function db_executeScalar($table, $column, $where="1"){
+        return db_query("select $column from $table where $where")->fetchColumn();
+    }
