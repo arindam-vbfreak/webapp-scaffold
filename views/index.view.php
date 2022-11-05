@@ -1,3 +1,3 @@
 <div class="container mt-3">
-    Donkey
+    Index page yo!
 </div>
