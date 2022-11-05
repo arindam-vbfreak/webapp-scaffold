@@ -10,6 +10,10 @@
         require array_key_exists($route, $routes) ? controller($route) : controller("/404");
     }
 
+    function addEventMapper(){
+        return "includes/misc.php";
+    }
+
     function controller($path){
         global $routes;
         $part ="controllers/".$routes[$path].".php";
@@ -32,4 +36,12 @@
             <link rel="stylesheet" href="<?=$path?>">
             <?php
         }
+    }
+
+    function writeJS($script){
+        echo "<script>{$script}</script>";
+    }
+
+    function ifRowEmpty($rows,$template){
+        echo $rows->rowCount()==0?$template:"";
     }

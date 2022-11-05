@@ -14,5 +14,5 @@
         dependencies($page,"css");
     ?>
 </head>
-<body>
-    <div id="content"></div>
+<body style="padding-bottom:50px;">
+<form method="POST">

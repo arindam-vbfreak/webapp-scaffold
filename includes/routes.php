@@ -2,6 +2,6 @@
     $routes = [
         '/' => 'index',
         '/home' => 'index',
-        '/index' => 'index',
+        '/cat' => 'index',
         '/404' => '404'
     ];

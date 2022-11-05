@@ -10,6 +10,6 @@ http_response_code(404);
     <title>Document</title>
 </head>
 <body>
-    File not found!    
+   <h4>File not found!</h4>
 </body>
 </html>
