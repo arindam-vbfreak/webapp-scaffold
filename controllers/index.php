@@ -1,5 +1,5 @@
 <?php
-    $page_title = "Dashboard";
+    $page_title = "Dashboards";
     $page = "index";
     
     require partials("header");

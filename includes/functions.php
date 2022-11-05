@@ -1,18 +1,10 @@
 <?php
+    session_start();
+
+    include "env.php";
     include "includes/connection.php";
     include "includes/routes.php";
-    include "env.php";
 
-    $debug=true;
-    
-    function getConnectionObject(){
-        global $debug,$development_settings,$production_settings;
-        $database = $debug?$development_settings["database"]:$production_settings["database"];
-        $server = $database["server"];
-        $port = $database["port"];
-        $dbname= $database["dbname"];
-        return new PDO("mysql:host=$server;port=$port;dbname=$dbname",$database["username"],$database["password"]);
-    }
     function run($route){
         global $routes;
         require array_key_exists($route, $routes) ? controller($route) : controller("/404");

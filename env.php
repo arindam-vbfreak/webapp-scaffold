@@ -18,3 +18,5 @@
             'dbname'=>''
         ]
     ];
+
+    $debug=isset($debug)?$debug:true;
